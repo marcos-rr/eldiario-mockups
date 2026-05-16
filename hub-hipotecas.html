@@ -38,10 +38,109 @@
                 </li>
                 <li><a href="#">Opinión</a></li>
                 <li><a href="#">Cultura</a></li>
-                <li><a href="#">≡ Más secciones</a></li>
+                <li><a href="javascript:void(0)" id="menu-trigger">≡ Secciones</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Menú Hamburguesa Overlay -->
+    <div id="hamburger-menu" class="menu-overlay">
+        <div class="menu-content">
+            <span class="close-menu" id="close-menu">&times;</span>
+            <div class="cmp-main-menu-tablet">
+                <!-- Secciones -->
+                <div>
+                    <span class="title-option">Secciones</span>
+                    <ul>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Sociedad</a></li>
+                        <li>
+                            <a href="#">Economía</a>
+                            <ul>
+                                <li>
+                                    <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
+                                    <ul>
+                                        <li><a href="hub-hipotecas.html">Hipotecas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Internacional - The Guardian</a></li>
+                        <li>
+                            <a href="#">Cultura</a>
+                            <ul>
+                                <li><a href="#">Librotea</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tecnología</a></li>
+                        <li><a href="#">Desalambre</a></li>
+                        <li><a href="#">El rincón de pensar</a></li>
+                        <li><a href="#">Consumo Claro</a></li>
+                        <li>
+                            <a href="#">Vertele</a>
+                            <ul>
+                                <li><a href="#">Programación TV</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Ediciones Locales -->
+                <div>
+                    <span class="title-option">Ediciones locales</span>
+                    <ul>
+                        <li><a href="#">Andalucía</a></li>
+                        <li><a href="#">Aragón</a></li>
+                        <li><a href="#">Asturias</a></li>
+                        <li><a href="#">Canarias</a></li>
+                        <li><a href="#">Catalunya</a></li>
+                        <li><a href="#">Madrid</a></li>
+                        <li><a href="#">Comunitat Valenciana</a></li>
+                        <li><a href="#">Galicia</a></li>
+                    </ul>
+                </div>
+                <!-- Opinión y Podcasts -->
+                <div>
+                    <span class="title-option">Opinión y blogs</span>
+                    <ul>
+                        <li><a href="#">Zona Crítica</a></li>
+                        <li><a href="#">Ignacio Escolar</a></li>
+                        <li><a href="#">Al día</a></li>
+                        <li><a href="#">Micromachismos</a></li>
+                    </ul>
+                    <br>
+                    <span class="title-option">Podcasts</span>
+                    <ul>
+                        <li><a href="#">Un tema Al día</a></li>
+                        <li><a href="#">Carne Cruda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const trigger = document.getElementById('menu-trigger');
+            const menu = document.getElementById('hamburger-menu');
+            const close = document.getElementById('close-menu');
+            if (trigger && menu && close) {
+                trigger.addEventListener('click', () => {
+                    menu.style.display = 'block';
+                    document.body.classList.add('menu-open');
+                });
+                close.addEventListener('click', () => {
+                    menu.style.display = 'none';
+                    document.body.classList.remove('menu-open');
+                });
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        menu.style.display = 'none';
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+            }
+        });
+    </script>
 
 
     <!-- Publicidad Megabanner Superior -->
