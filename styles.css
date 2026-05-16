@@ -523,7 +523,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .grid-layout, .grid-3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .article-body .widget-indicadores {
     float: none;
@@ -531,4 +531,34 @@ footer {
     margin: 20px 0;
   }
   h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  
+  /* Horizontal scroll for menus */
+  .main-nav ul, .local-menu ul, .hot-links .container, .top-bar .container > div {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    gap: 10px;
+  }
+  
+  /* Hide scrollbars for clean UI */
+  .main-nav ul::-webkit-scrollbar, .local-menu ul::-webkit-scrollbar, .hot-links .container::-webkit-scrollbar, .top-bar .container > div::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header-flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .logo img {
+    height: 35px !important;
+  }
+  
+  .top-bar {
+    padding: 10px 0;
+  }
 }
