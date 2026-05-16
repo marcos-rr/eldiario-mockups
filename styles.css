@@ -4,7 +4,7 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #333333;
-  --brand-blue: #004A7F; /* Color azul caracterÃ­stico de elDiario.es */
+  --brand-blue: #004A7F; /* Color azul característico de elDiario.es */
   --brand-yellow: #F8E71C; /* Amarillo de apoyo */
   --accent-color: #004A7F; 
   --hot-link-color: #d32f2f; 
@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: var(--font-serif); /* Body text en eldiario suele tener un aire mÃ¡s clÃ¡sico o una sans muy neutra, usaremos serif para entradillas y sans para UI */
+  font-family: var(--font-serif); /* Body text en eldiario suele tener un aire más clásico o una sans muy neutra, usaremos serif para entradillas y sans para UI */
   color: var(--primary-color);
   background-color: var(--bg-white);
   line-height: 1.5;
@@ -444,7 +444,7 @@ h3 { font-size: 1.5rem; }
   font-size: 1.8rem;
 }
 .tldr-box {
-  background-color: #fefce8; /* Un amarillo muy pÃ¡lido */
+  background-color: #fefce8; /* Un amarillo muy pálido */
   border-top: 3px solid var(--brand-yellow);
   padding: 25px;
   margin: 30px 0;
@@ -503,7 +503,7 @@ h3 { font-size: 1.5rem; }
   font-size: 1.05rem;
 }
 .evergreen-links li::before {
-  content: "â†’";
+  content: "→";
   color: var(--brand-blue);
   margin-right: 10px;
   font-weight: bold;
