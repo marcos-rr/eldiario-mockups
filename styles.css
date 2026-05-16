@@ -181,10 +181,10 @@ a:hover {
 }
 .local-menu a {
   display: block;
-  padding: 15px 12px;
+  padding: 10px 10px;
   color: #444;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.2s ease;
