@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elDiario.es - Periodismo a pesar de todo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- A. Cabecera global del medio -->
+    <div class="top-bar">
+        <div class="container">
+            <div><strong>Hoy hablamos de...</strong> <a href="#">Amnistía</a> <a href="#">Gaza</a> <a href="#">Elecciones</a></div>
+            <div>
+                <a href="#">Redes</a>
+                <a href="#">Boletines</a>
+                <a href="#">Hazte Socio/a</a>
+                <a href="#">Buscar</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">elDiario.es</div>
+            <div>
+                <!-- placeholder para publicidad o botones extra -->
+                <a href="#" class="btn">Apoya nuestro periodismo</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <!-- Menú principal inspirado en la home real -->
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Internacional</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="active">Economía ▾</a>
+                    <!-- Visibilidad de Economía Personal como subacceso -->
+                    <div class="dropdown">
+                        <a href="#">Macroeconomía</a>
+                        <a href="#">Trabajo</a>
+                        <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
+                    </div>
+                </li>
+                <li><a href="#">Opinión</a></li>
+                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Clima</a></li>
+                <li><a href="#">Desalambre</a></li>
+                <li><a href="#">Igualdad</a></li>
+                <li><a href="#">Vertele</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">≡ Más secciones</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- E. Hot links / accesos rápidos contextuales -->
+    <div class="hot-links">
+        <div class="container">
+            <span>En Portada:</span>
+            <a href="#" class="hot">Euríbor</a>
+            <a href="hub-hipotecas.html">Hipotecas</a>
+            <a href="#">Ayudas vivienda</a>
+            <a href="#">Tipos de interés</a>
+            <a href="#">BCE</a>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- C. Bloque de apertura editorial antes del módulo de Economía Personal -->
+        <div class="grid-layout">
+            <div class="main-content">
+                <article class="article-card main-story">
+                    <div class="placeholder-img"></div>
+                    <span class="kicker">Política</span>
+                    <h1>Acuerdo inminente para la renovación del Consejo General del Poder Judicial</h1>
+                    <p class="entradilla">Los partidos cierran los últimos flecos tras meses de negociaciones bloqueadas. Se espera un anuncio conjunto esta tarde.</p>
+                </article>
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
+                    <article class="article-card">
+                        <div class="placeholder-img" style="height: 120px;"></div>
+                        <h2>La oposición pide explicaciones urgentes en el Congreso</h2>
+                    </article>
+                    <article class="article-card">
+                        <div class="placeholder-img" style="height: 120px;"></div>
+                        <h2>Análisis: Los ganadores y perdedores del pacto</h2>
+                    </article>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <article class="article-card">
+                    <span class="kicker">Opinión</span>
+                    <h2>El fin del bloqueo</h2>
+                    <p>Por Ignacio Escolar</p>
+                </article>
+                <article class="article-card">
+                    <div class="placeholder-img" style="height: 100px;"></div>
+                    <span class="kicker">Internacional</span>
+                    <h2>Nuevas protestas en las capitales europeas</h2>
+                </article>
+            </aside>
+        </div>
+
+        <!-- D. Módulo fijo en la home para empujar el vertical -->
+        <!-- Inserción estratégica del módulo fijo de Economía Personal en la mitad superior -->
+        <section class="module highlight">
+            <div class="module-header">
+                <h2>Economía Personal</h2>
+                <a href="vertical-economia-personal.html">Ir al vertical completo →</a>
+            </div>
+            
+            <div class="local-menu" style="background:transparent; border-top:none; margin-bottom: 15px; padding-top:0;">
+                <ul>
+                    <li><a href="hub-hipotecas.html" class="active">Hipotecas</a></li>
+                    <li><a href="#">Declaración de la Renta</a></li>
+                    <li><a href="#">Pensiones</a></li>
+                    <li><a href="#">Ayudas</a></li>
+                    <li><a href="#">Ahorro</a></li>
+                    <li><a href="#">Vivienda</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-3">
+                <article class="article-card" style="border:none; margin-bottom:0;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <div class="placeholder-img" style="height: 150px;"></div>
+                        <span class="kicker">Guía de Hipotecas</span>
+                        <h3 style="font-size: 1.2rem;">Qué hipoteca te puedes permitir según tu sueldo actual</h3>
+                    </a>
+                </article>
+                <article class="article-card" style="border:none; margin-bottom:0;">
+                    <div class="placeholder-img" style="height: 150px;"></div>
+                    <span class="kicker">Ayudas</span>
+                    <h3 style="font-size: 1.2rem;">Calendario completo para solicitar el Bono Alquiler Joven</h3>
+                </article>
+                <article class="article-card" style="border:none; margin-bottom:0;">
+                    <div class="placeholder-img" style="height: 150px;"></div>
+                    <span class="kicker">Renta</span>
+                    <h3 style="font-size: 1.2rem;">Las 5 deducciones autonómicas que sueles olvidar en el borrador</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- F. Módulos relacionados de actualidad económica -->
+        <section class="module">
+            <div class="module-header">
+                <h2>Mercados y Consumo</h2>
+            </div>
+            <div class="grid-layout">
+                <div>
+                    <article class="article-card">
+                        <div class="placeholder-img" style="height: 250px;"></div>
+                        <span class="kicker">Tipos de Interés</span>
+                        <h2>El BCE prepara otra bajada de tipos ante la debilidad económica</h2>
+                        <p class="entradilla">Lagarde avisa de que la inflación está controlada y abre la puerta a un alivio en las cuotas hipotecarias antes de fin de año.</p>
+                        <!-- Enlaces secundarios hacia el clúster -->
+                        <div style="margin-top: 10px; font-size: 0.9rem;">
+                            <strong>Contexto:</strong> 
+                            <a href="hub-hipotecas.html" style="margin-right: 10px;">→ Ver guía sobre hipoteca variable</a>
+                            <a href="hub-hipotecas.html">→ Cómo calcular tu nueva cuota</a>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="article-card">
+                        <h3>El euríbor cierra el mes a la baja y da un respiro a los hipotecados</h3>
+                    </article>
+                    <article class="article-card">
+                        <h3>El precio de la vivienda de segunda mano sube un 5% en las grandes ciudades</h3>
+                        <a href="hub-hipotecas.html" style="font-size: 0.85rem;">→ Gastos ocultos al comprar casa</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>elDiario.es - Mockup TFM Arquitectura SEO</p>
+    </footer>
+</body>
+</html>
