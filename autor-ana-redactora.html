@@ -6,119 +6,102 @@
     <title>Ana Redactora - Perfil del Autor | elDiario.es</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .author-header-eldiario {
-            padding: 40px 0;
-            border-bottom: 1px solid #eee;
+        .author-profile-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .author-header-narrative {
+            text-align: center;
             margin-bottom: 30px;
-            background-color: #fff;
         }
-        .author-flex {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-        .author-visual-aside {
-            width: 250px;
-            flex-shrink: 0;
-        }
-        .author-photo-round {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border: 5px solid #f0f0f0;
-        }
-        .author-photo-round img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .author-main-info h1 {
-            font-size: 3rem;
-            margin-bottom: 5px;
+        .author-header-narrative h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
             color: var(--primary-color);
         }
-        .author-position {
-            font-size: 1.1rem;
-            color: var(--brand-blue);
-            font-weight: 700;
+        .author-header-narrative .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
-        .extended-bio {
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .author-nav-local {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 30px 0;
+            padding: 10px 0;
+        }
+        .author-nav-local ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+        .author-nav-local a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .author-nav-local a:hover {
+            color: var(--accent-color);
+        }
+        .author-article-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            border-bottom: 2px solid var(--brand-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .author-article-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
             color: #333;
         }
-        .extended-bio p {
-            margin-bottom: 20px;
-        }
-        .author-meta-box {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
-        .author-meta-box div {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .author-meta-box strong {
-            color: var(--primary-color);
-        }
-        .publication-card {
-            display: flex;
-            gap: 15px;
-            background: #fff;
+        .contact-item {
             padding: 15px;
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-            align-items: center;
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            text-align: center;
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            transition: all 0.2s;
         }
-        .publication-cover {
-            width: 50px;
-            height: 70px;
+        .contact-item:hover {
             background: var(--brand-blue);
-            flex-shrink: 0;
+            color: #fff;
+            border-color: var(--brand-blue);
+        }
+        .latest-articles-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
     <!-- Cabecera global elDiario.es -->
-    <div class="top-bar">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div><strong>Hoy hablamos de...</strong> <a href="#">Hipotecas</a> <a href="#">Euríbor</a> <a href="#">Vivienda</a></div>
-            <div>
-                <a href="#" class="btn-support">Hazte socio/a</a>
-            </div>
-        </div>
-    </div>
-
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo"><a href="home-eldiario.html"><img src="https://www.eldiario.es/assets/img/svg/logos/eldiario-tagline-2c.h-129fb361f1eeeaf4af9b8135dc8199ea.svg" alt="elDiario.es" style="height: 50px;"></a></div>
+            <div class="header-actions">
+                <a href="#" class="btn-support">Hazte socio/a</a>
+                <a href="javascript:void(0)" id="menu-trigger" style="margin-left:20px; font-weight:bold; text-decoration:none; color:black;">≡ Menú</a>
+            </div>
         </div>
     </header>
-
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="home-eldiario.html">Portada</a></li>
-                <li class="has-dropdown">
-                    <a href="vertical-economia-personal.html" class="active">Economía Personal ▾</a>
-                    <div class="dropdown">
-                        <a href="hub-hipotecas.html">Hipotecas</a>
-                    </div>
-                </li>
-                <li><a href="#">Política</a></li>
-                <li><a href="#">Sociedad</a></li>
-                <li><a href="javascript:void(0)" id="menu-trigger">≡ Secciones</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Menú Hamburguesa Overlay -->
     <div id="hamburger-menu" class="menu-overlay">
@@ -141,89 +124,77 @@
         </div>
     </div>
 
-    <main class="container">
-        <!-- 1. Cabecera del Autor con look elDiario.es -->
-        <section class="author-header-eldiario">
-            <div class="author-flex">
-                <div class="author-visual-aside">
-                    <div class="author-photo-round">
-                        <img src="https://loremflickr.com/400/400/woman,professional" alt="Ana Redactora">
-                    </div>
-                    <div class="social-links" style="display: flex; gap: 10px; margin-bottom: 20px;">
-                        <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #000; color: #fff;">𝕏</a>
-                        <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #0077b5; color: #fff;">in</a>
-                        <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #666; color: #fff;">✉</a>
-                    </div>
-                    <div class="author-meta-box">
-                        <div><span>Desde:</span> <strong>2021</strong></div>
-                        <div><span>Especialidad:</span> <strong>Hipotecas</strong></div>
-                        <div><span>Ubicación:</span> <strong>Madrid</strong></div>
-                    </div>
-                </div>
+    <main class="author-profile-page">
+        <!-- 1. Título y Subtítulo (Nombre y Cargo) -->
+        <header class="author-header-narrative">
+            <h1>Ana Redactora</h1>
+            <div class="subtitle">Coordinadora de Economía Personal en elDiario.es</div>
+        </header>
 
-                <div class="author-main-info">
-                    <div class="author-position">Coordinadora de Economía Personal</div>
-                    <h1>Ana Redactora</h1>
-                    <div class="extended-bio">
-                        <p>Ana Redactora es la coordinadora de la sección de Economía Personal en elDiario.es. Con más de una década de trayectoria en el periodismo financiero, su trabajo se centra en descodificar los entresijos del mercado hipotecario, la fiscalidad doméstica y los derechos del consumidor frente a las entidades bancarias.</p>
-                        
-                        <p>Antes de unirse a elDiario.es, Ana trabajó como analista senior en el diario económico Cinco Días y fue corresponsal en Bruselas, cubriendo la crisis de deuda soberana y las reformas de la Eurozona. Su enfoque combina el rigor de los datos macroeconómicos con una vocación de servicio público, buscando siempre la utilidad práctica para el lector.</p>
-                        
-                        <p>Es licenciada en Periodismo por la Universidad Complutense de Madrid y cuenta con un Máster en Finanzas Internacionales. En 2022, recibió el Premio a la Excelencia en Periodismo Económico por su serie sobre las cláusulas suelo y la transparencia bancaria.</p>
-                    </div>
+        <!-- 2. Menú Local de Autor -->
+        <nav class="author-nav-local">
+            <ul>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#contacto">Contactar</a></li>
+                <li><a href="#articulos">Últimos artículos</a></li>
+            </ul>
+        </nav>
+
+        <div class="author-article-content">
+            <div id="acerca-de">
+                <!-- 3. Lo que cubro (H2) -->
+                <h2>Lo que cubro</h2>
+                <p>Mi trabajo en elDiario.es se centra en explicar cómo las grandes decisiones financieras impactan en el día a día de las personas. Coordino el vertical de Economía Personal, con un enfoque especial en el mercado inmobiliario y la transparencia bancaria.</p>
+                <p>Desde la evolución diaria del Euríbor hasta los cambios legislativos en la Ley de Vivienda, trato de ofrecer análisis que sirvan de herramienta útil para quienes tienen una hipoteca o buscan acceder a una vivienda. Creo firmemente en el periodismo de servicio público que ayuda a descifrar la letra pequeña de los contratos y las instituciones.</p>
+
+                <!-- 4. Mi trayectoria (H2) -->
+                <h2>Mi trayectoria</h2>
+                <p>Cuento con más de una década de experiencia en información económica. Antes de incorporarme a este proyecto, formé parte de la redacción de Cinco Días como analista senior de mercados y fui corresponsal en Bruselas durante los años más intensos de la crisis financiera europea, cubriendo las reformas de la Eurozona.</p>
+                <p>Soy licenciada en Periodismo por la Universidad Complutense de Madrid y Máster en Finanzas Internacionales. En 2022, fui galardonada con el Premio a la Excelencia en Periodismo Económico por una serie de reportajes sobre el impacto social de las cláusulas suelo en España.</p>
+            </div>
+
+            <div id="contacto">
+                <!-- 5. Contáctame (H2) -->
+                <h2>Contáctame</h2>
+                <p>La mejor forma de contactar conmigo para compartir información, sugerencias o consultas es a través del correo electrónico y mis perfiles en redes sociales:</p>
+                
+                <div class="contact-grid">
+                    <a href="mailto:ana.redactora@eldiario.es" class="contact-item">✉ Email</a>
+                    <a href="#" class="contact-item">𝕏 Twitter</a>
+                    <a href="#" class="contact-item">f Facebook</a>
+                    <a href="#" class="contact-item">📷 Instagram</a>
+                    <a href="#" class="contact-item">🧵 Threads</a>
                 </div>
             </div>
-        </section>
 
-        <div class="grid-layout">
-            <div class="main-content">
-                <div class="module-header" style="border-bottom: 3px solid var(--primary-color); margin-bottom: 30px;">
-                    <h2 style="text-transform: uppercase; font-size: 1.2rem; padding-bottom: 5px;">Últimos artículos de Ana Redactora</h2>
-                </div>
+            <div id="articulos" class="latest-articles-section">
+                <!-- 6. Últimos artículos (H2) -->
+                <h2>Últimos artículos</h2>
                 
-                <section class="module">
-                    <article class="article-card" style="display: flex; gap: 20px; margin-bottom: 30px; border:none; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <img src="https://loremflickr.com/300/180/euribor" style="width:200px; height:120px; object-fit:cover;" alt="Euribor">
+                <div class="module">
+                    <article class="article-card" style="display: flex; gap: 20px; margin-bottom: 25px; border:none; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <img src="https://loremflickr.com/300/180/euribor" style="width:180px; height:110px; object-fit:cover;" alt="Euribor">
                         <div>
                             <span class="kicker">Hipotecas</span>
                             <h3><a href="noticia-hub-hipotecas.html">Qué implica para tu hipoteca la última bajada del euríbor</a></h3>
-                            <p style="font-size: 0.95rem; color: #555;">La caída del indicador dará un respiro a quienes revisen su cuota variable este mes.</p>
+                            <p style="font-size: 0.9rem; color: #666;">Análisis de la caída del indicador y el ahorro real para las familias.</p>
                         </div>
                     </article>
 
-                    <article class="article-card" style="display: flex; gap: 20px; margin-bottom: 30px; border:none; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <img src="https://loremflickr.com/300/180/savings" style="width:200px; height:120px; object-fit:cover;" alt="Ahorro">
+                    <article class="article-card" style="display: flex; gap: 20px; margin-bottom: 25px; border:none; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <img src="https://loremflickr.com/300/180/savings" style="width:180px; height:110px; object-fit:cover;" alt="Ahorro">
                         <div>
                             <span class="kicker">Economía Personal</span>
-                            <h3><a href="#">El truco del 20%: Cómo ahorrar sin sacrificar tu calidad de vida</a></h3>
-                            <p style="font-size: 0.95rem; color: #555;">Guía práctica para gestionar el presupuesto familiar en tiempos de incertidumbre.</p>
+                            <h3><a href="#">El truco del 20%: Cómo ahorrar sin sacrificar tu bienestar</a></h3>
+                            <p style="font-size: 0.9rem; color: #666;">Guía práctica para gestionar el presupuesto familiar.</p>
                         </div>
                     </article>
-                </section>
+                </div>
             </div>
-
-            <aside class="sidebar">
-                <div class="module highlight">
-                    <h3>Newsletter de Ana</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 15px;">Recibe cada jueves el análisis exclusivo de Ana Redactora sobre vivienda y finanzas.</p>
-                    <a href="#" class="btn" style="width:100%; display:block; text-align:center;">Suscribirme</a>
-                </div>
-
-                <div class="module">
-                    <h3 style="font-size: 1rem; text-transform: uppercase; margin-bottom: 15px;">Publicaciones</h3>
-                    <div class="publication-card">
-                        <div class="publication-cover"></div>
-                        <div>
-                            <div style="font-weight:bold; font-size:0.85rem;">Guía para no perderse en el banco</div>
-                            <div style="font-size:0.75rem; color:#666;">(2023)</div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
         </div>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" style="margin-top: 80px;">
         <p>elDiario.es - Mockup TFM Arquitectura SEO</p>
     </footer>
 
