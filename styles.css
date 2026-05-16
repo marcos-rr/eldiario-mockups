@@ -87,9 +87,7 @@ a:hover {
 }
 
 .main-nav {
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--bg-white);
+  background-color: var(--brand-blue);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -106,15 +104,13 @@ a:hover {
 .main-nav a {
   display: block;
   padding: 14px 0;
-  color: var(--primary-color);
-  font-weight: 700;
+  color: white;
+  font-family: var(--font-sans);
+  font-weight: 500;
   font-size: 0.95rem;
-  text-transform: uppercase;
 }
 .main-nav a.active, .main-nav a:hover {
-  color: var(--brand-blue);
-  border-bottom: 3px solid var(--primary-color);
-  padding-bottom: 11px;
+  color: #aed9f8;
   text-decoration: none;
 }
 .has-dropdown {
