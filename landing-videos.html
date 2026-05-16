@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - elDiario.es</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .video-hero {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 25px;
+            box-shadow: 0 20px-40px rgba(0,0,0,0.4);
+        }
+        .video-container iframe, .video-container .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+        .play-btn-large {
+            width: 80px;
+            height: 80px;
+            background-color: var(--brand-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+        }
+        .play-btn-large:hover {
+            transform: scale(1.1);
+            background-color: #005fa3;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .video-card {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        .video-thumb {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .video-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .video-card:hover img {
+            transform: scale(1.05);
+        }
+        .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-family: var(--font-sans);
+            font-weight: 700;
+        }
+        .play-icon-small {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0,74,127,0.9);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .video-card:hover .play-icon-small {
+            opacity: 1;
+        }
+        .video-category {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--brand-blue);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera global -->
+    <div class="top-bar">
+        <div class="container">
+            <div><strong>Hoy hablamos de...</strong> <a href="#">Amnistía</a> <a href="#">Gaza</a> <a href="#">Elecciones</a></div>
+            <div>
+                <a href="#">Redes</a>
+                <a href="#">Boletines</a>
+                <a href="#">Hazte Socio/a</a>
+                <a href="#">Buscar</a>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo"><a href="home-eldiario-economia-personal.html" style="color:inherit; text-decoration:none;"><img src="https://www.eldiario.es/assets/img/svg/logos/eldiario-tagline-2c.h-129fb361f1eeeaf4af9b8135dc8199ea.svg" alt="elDiario.es" style="height: 50px;"></a></div>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="home-eldiario-economia-personal.html">Portada</a></li>
+                <li><a href="vertical-economia-personal.html">Economía Personal</a></li>
+                <li><a href="hub-hipotecas.html">Hipotecas</a></li>
+                <li><a href="#" class="active">Vídeos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="video-hero">
+        <div class="container">
+            <div class="grid-layout" style="grid-template-columns: 1.5fr 1fr; align-items: center;">
+                <div>
+                    <div class="video-container">
+                        <div class="video-placeholder" style="background-image: url('https://loremflickr.com/1200/675/bank,economy');">
+                            <button class="play-btn-large">▶</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-left: 20px;">
+                    <span class="kicker" style="color: #00a4e6;">Videoexplicación</span>
+                    <h1 style="color: white; font-size: 2.5rem;">Cómo se calcula el euríbor y por qué afecta tanto a tu bolsillo</h1>
+                    <p style="color: #ccc; font-size: 1.1rem; margin-top: 15px;">Te explicamos de forma sencilla qué hay detrás del indicador que marca la cuota de tu hipoteca y cómo le afectan las decisiones del Banco Central Europeo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <h2 class="video-category">Videoexplicaciones</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/taxes,money" alt="Renta">
+                        <span class="duration">03:45</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Economía</span>
+                    <h3 style="font-size: 1.1rem;">Cómo hacer la declaración de la renta si eres autónomo</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/city,rent" alt="Alquiler">
+                        <span class="duration">04:12</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Vivienda</span>
+                    <h3 style="font-size: 1.1rem;">¿Qué zonas son tensionadas? Guía sobre la Ley de Vivienda</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/pension,old" alt="Pensiones">
+                        <span class="duration">02:50</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Sociedad</span>
+                    <h3 style="font-size: 1.1rem;">El futuro de las pensiones: claves de la última reforma</h3>
+                </a>
+            </div>
+        </div>
+
+        <h2 class="video-category">Videonoticias</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/congress,spain" alt="Congreso">
+                        <span class="duration">01:30</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Política</span>
+                    <h3 style="font-size: 1.1rem;">Tensión en el Congreso por el pacto judicial</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/protest,street" alt="Protesta">
+                        <span class="duration">02:15</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Internacional</span>
+                    <h3 style="font-size: 1.1rem;">Crónica de las protestas en las calles de Bruselas</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="noticia-hub-hipotecas.html">
+                    <div class="video-thumb">
+                        <img src="https://loremflickr.com/400/225/nature,fire" alt="Clima">
+                        <span class="duration">03:10</span>
+                        <div class="play-icon-small">▶</div>
+                    </div>
+                    <span class="kicker">Clima</span>
+                    <h3 style="font-size: 1.1rem;">Ola de calor extrema: ¿estamos preparados para el verano?</h3>
+                </a>
+            </div>
+        </div>
+
+        <!-- Publicidad Cierre -->
+        <div class="ad-slot ad-megabanner">
+            <span class="ad-label">Publicidad</span>
+            <div class="ad-placeholder">970 x 90</div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>elDiario.es - Mockup TFM Arquitectura SEO</p>
+    </footer>
+</body>
+</html>
