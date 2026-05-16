@@ -10,12 +10,10 @@
     <!-- Cabecera global -->
     <div class="top-bar">
         <div class="container">
-            <div><strong>Hoy hablamos de...</strong> <a href="#">Amnistía</a> <a href="#">Gaza</a> <a href="#">Elecciones</a></div>
+            <div><strong>Hoy hablamos de...</strong> <a href="#">Hipotecas</a> <a href="#">Vivienda</a> <a href="#">Euríbor</a></div>
             <div>
-                <a href="#">Redes</a>
-                <a href="#">Boletines</a>
                 <a href="#">Hazte Socio/a</a>
-                <a href="#">Buscar</a>
+                <a href="javascript:void(0)" id="menu-trigger" style="margin-left:20px; font-weight:bold; text-decoration:none; color:black;">≡ Menú</a>
             </div>
         </div>
     </div>
@@ -27,17 +25,15 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="#">Política</a></li>
-                <li><a href="#">Internacional</a></li>
+                <li><a href="home-eldiario.html">Portada</a></li>
                 <li class="has-dropdown">
-                    <a href="#" class="active">Economía ▾</a>
+                    <a href="vertical-economia-personal.html" class="active">Economía Personal ▾</a>
                     <div class="dropdown">
-                        <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
-                        <a href="hub-hipotecas.html" style="padding-left: 30px;">- Hipotecas</a>
+                        <a href="hub-hipotecas.html">Hipotecas</a>
                     </div>
                 </li>
-                <li><a href="#">Opinión</a></li>
-                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Sociedad</a></li>
                 <li><a href="javascript:void(0)" id="menu-trigger">≡ Secciones</a></li>
             </ul>
         </div>
@@ -48,70 +44,16 @@
         <div class="menu-content">
             <span class="close-menu" id="close-menu">&times;</span>
             <div class="cmp-main-menu-tablet">
-                <!-- Secciones -->
                 <div>
                     <span class="title-option">Secciones</span>
                     <ul>
-                        <li><a href="#">Política</a></li>
-                        <li><a href="#">Sociedad</a></li>
+                        <li><a href="home-eldiario.html">Portada</a></li>
                         <li>
-                            <a href="#">Economía</a>
+                            <a href="vertical-economia-personal.html">Economía Personal</a>
                             <ul>
-                                <li>
-                                    <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
-                                    <ul>
-                                        <li><a href="hub-hipotecas.html">Hipotecas</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="hub-hipotecas.html">Hipotecas</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Internacional - The Guardian</a></li>
-                        <li>
-                            <a href="#">Cultura</a>
-                            <ul>
-                                <li><a href="#">Librotea</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Tecnología</a></li>
-                        <li><a href="#">Desalambre</a></li>
-                        <li><a href="#">El rincón de pensar</a></li>
-                        <li><a href="#">Consumo Claro</a></li>
-                        <li>
-                            <a href="#">Vertele</a>
-                            <ul>
-                                <li><a href="#">Programación TV</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Ediciones Locales -->
-                <div>
-                    <span class="title-option">Ediciones locales</span>
-                    <ul>
-                        <li><a href="#">Andalucía</a></li>
-                        <li><a href="#">Aragón</a></li>
-                        <li><a href="#">Asturias</a></li>
-                        <li><a href="#">Canarias</a></li>
-                        <li><a href="#">Catalunya</a></li>
-                        <li><a href="#">Madrid</a></li>
-                        <li><a href="#">Comunitat Valenciana</a></li>
-                        <li><a href="#">Galicia</a></li>
-                    </ul>
-                </div>
-                <!-- Opinión y Podcasts -->
-                <div>
-                    <span class="title-option">Opinión y blogs</span>
-                    <ul>
-                        <li><a href="#">Zona Crítica</a></li>
-                        <li><a href="#">Ignacio Escolar</a></li>
-                        <li><a href="#">Al día</a></li>
-                        <li><a href="#">Micromachismos</a></li>
-                    </ul>
-                    <br>
-                    <span class="title-option">Podcasts</span>
-                    <ul>
-                        <li><a href="#">Un tema Al día</a></li>
-                        <li><a href="#">Carne Cruda</a></li>
                     </ul>
                 </div>
             </div>
@@ -142,18 +84,9 @@
         });
     </script>
 
-
-    <!-- Publicidad Megabanner Superior -->
-    <div class="container" style="text-align: center;">
-        <div class="ad-slot ad-megabanner">
-            <span class="ad-label">Publicidad</span>
-            <div class="ad-placeholder">970 x 90</div>
-        </div>
-    </div>
-
     <main class="container">
         <!-- Cabecera del vertical -->
-        <div class="breadcrumb">
+        <div class="breadcrumb" style="margin-top:20px;">
             <a href="home-eldiario.html">Inicio</a> > Economía Personal
         </div>
         
@@ -161,22 +94,6 @@
             <h1 style="font-size: 3rem;">Economía Personal</h1>
             <p class="entradilla" style="max-width: 800px; margin: 0 auto;">Te ayudamos a entender y tomar mejores decisiones sobre tus finanzas cotidianas: vivienda, impuestos, ahorro y las ayudas que te corresponden por derecho.</p>
         </div>
-
-        <!-- Menú local del vertical -->
-        <nav class="local-menu">
-            <div class="container">
-                <ul>
-                    <li><a href="hub-hipotecas.html" style="background-color: var(--accent-color); color: white;">Hipotecas</a></li>
-                    <li><a href="#">Declaración de la renta</a></li>
-                    <li><a href="#">Pensiones</a></li>
-                    <li><a href="#">Ayudas</a></li>
-                    <li><a href="#">Prestaciones</a></li>
-                    <li><a href="#">Ahorro</a></li>
-                    <li><a href="#">Trámites</a></li>
-                    <li><a href="#">Vivienda</a></li>
-                </ul>
-            </div>
-        </nav>
 
         <!-- Bloque 1. Hero o bloque principal -->
         <section class="module" style="border:none; padding:0;">
@@ -193,177 +110,149 @@
             </article>
         </section>
 
-        <!-- Bloque 3. Hipotecas como subhub prioritario (Destacado arriba) -->
-        <section class="module highlight">
+        <!-- NOVEDAD: Bloque 8.4 TFM - Claves Hipotecarias -->
+        <section class="module highlight" style="background-color: #fafafa; padding: 30px; border-top: 4px solid var(--accent-color);">
             <div class="module-header">
-                <h2><a href="hub-hipotecas.html" style="color:inherit; text-decoration:none;">Hipotecas</a></h2>
-                <a href="hub-hipotecas.html">Entrar al hub especial →</a>
+                <h2 style="font-size: 1.5rem;">Guía de Supervivencia Hipotecaria</h2>
+                <a href="hub-hipotecas.html">Ver todo en el Hub →</a>
             </div>
-            <p style="margin-bottom: 20px;">Todo el conocimiento que necesitas para financiar tu vivienda.</p>
-            <div class="grid-3" style="grid-template-columns: repeat(6, 1fr); gap: 10px;">
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Pedir hipoteca</a>
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Capacidad de compra</a>
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Ahorro y financiación</a>
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Gastos de hipoteca</a>
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Tipos de hipoteca</a>
-                <a href="#" class="btn" style="text-align:center; font-size: 0.85rem; padding: 10px 5px;">Ayudas y perfiles</a>
+            <div class="grid-layout" style="grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                <div style="border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                    <h3 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">Gastos de una hipoteca</a></h3>
+                    <p style="font-size: 0.95rem; color: #444;">Tasación, notaría, registro e impuestos: qué pagas tú y qué paga el banco.</p>
+                </div>
+                <div style="border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                    <h3 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">Cuánto ahorro necesito</a></h3>
+                    <p style="font-size: 0.95rem; color: #444;">El mito del 20%: por qué necesitas tener ahorrado más de lo que crees.</p>
+                </div>
+                <div style="border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                    <h3 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">Qué hipoteca puedo permitirme</a></h3>
+                    <p style="font-size: 0.95rem; color: #444;">La regla del 30% de tu salario y cómo calcular tu capacidad de endeudamiento real.</p>
+                </div>
+                <div style="border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                    <h3 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">Fija, variable o mixta</a></h3>
+                    <p style="font-size: 0.95rem; color: #444;">Análisis de ventajas e inconvenientes de cada tipo según el escenario económico actual.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Bloque 2. Subterritorios destacados -->
+        <!-- Bloque 2. Subterritorios destacados (Inspiración El Economista) -->
         <section class="module">
             <div class="module-header">
-                <h2>Otros Servicios</h2>
+                <h2>Servicios y Guías Prácticas</h2>
             </div>
-            <div class="grid-3">
-                <div class="service-card">
-                    <h3>Declaración de la Renta</h3>
-                    <p>Guías, deducciones y fechas clave para cumplir con Hacienda sin pagar de más.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+            <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Renta y Fiscalidad</h3>
+                    <p style="font-size: 0.9rem;">Deducciones, plazos y novedades de la campaña de la Renta 2024.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
-                <div class="service-card">
-                    <h3>Ayudas y Prestaciones</h3>
-                    <p>IMV, ayudas al alquiler, bonos sociales y cómo tramitarlos paso a paso.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Inversión y Fondos</h3>
+                    <p style="font-size: 0.9rem;">Cómo rentabilizar tus ahorros: depósitos, letras del Tesoro y fondos.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
-                <div class="service-card">
-                    <h3>Pensiones</h3>
-                    <p>Cálculo de jubilación, requisitos y novedades sobre el sistema público.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Pensiones</h3>
+                    <p style="font-size: 0.9rem;">Calcula tu jubilación y conoce las últimas reformas del sistema.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
-                <div class="service-card">
-                    <h3>Ahorro</h3>
-                    <p>Consejos de economía doméstica, facturas de luz y optimización de gastos.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Banca y Cuentas</h3>
+                    <p style="font-size: 0.9rem;">Las mejores cuentas remuneradas y comisiones que no deberías pagar.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
-                <div class="service-card">
-                    <h3>Vivienda</h3>
-                    <p>Alquileres, derechos de los inquilinos, Ley de Vivienda y mercado inmobiliario.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Consumo y Energía</h3>
+                    <p style="font-size: 0.9rem;">Trucos para bajar el recibo de la luz, el gas y el carrito de la compra.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
-                <div class="service-card">
-                    <h3>Impuestos y Tasas</h3>
-                    <p>IBI, plusvalías, tasas municipales y cómo recurrir cobros indebidos.</p>
-                    <a href="noticia-hub-hipotecas.html" class="btn">Ver guías</a>
+                <div class="service-card" style="padding: 20px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; border-bottom: 2px solid var(--brand-blue); padding-bottom: 5px;">Seguros</h3>
+                    <p style="font-size: 0.9rem;">Coche, hogar y vida: compara coberturas para ahorrar en tus pólizas.</p>
+                    <a href="#" style="font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Ir a sección →</a>
                 </div>
             </div>
         </section>
 
-        <div class="grid-layout">
-            <!-- Bloque 4. Actualidad conectada con servicio -->
-            <section class="main-content module">
-                <div class="module-header">
-                    <h2>La actualidad que afecta a tu bolsillo</h2>
+        <div class="grid-layout" style="grid-template-columns: 1fr 300px; gap: 40px; margin-top: 40px;">
+            <!-- Bloque 4. Actualidad (Contenido El Economista) -->
+            <section class="main-content module" style="border:none; padding:0;">
+                <div class="module-header" style="border-bottom: 3px solid #000; padding-bottom: 5px;">
+                    <h2>Lo último en Finanzas Personales</h2>
                 </div>
-                <article class="article-card">
-                    <span class="kicker">Regulación</span>
-                    <h3><a href="noticia-hub-hipotecas.html">El Gobierno aprueba el tope a los alquileres en zonas tensionadas</a></h3>
-                    <p>Entra en vigor la nueva medida que limita las subidas. <a href="noticia-hub-hipotecas.html">→ ¿Qué significa esto para tu contrato actual?</a></p>
+                <article class="article-card" style="display: flex; gap: 20px; padding: 20px 0;">
+                    <img src="https://loremflickr.com/200/120/bank" style="width:150px; height:100px; object-fit:cover;" alt="Banca">
+                    <div>
+                        <span class="kicker">Ahorro</span>
+                        <h3><a href="noticia-hub-hipotecas.html">Las mejores cuentas remuneradas para batir a la inflación en mayo</a></h3>
+                        <p style="font-size: 0.9rem;">Analizamos las entidades que ofrecen hasta un 4% TAE sin vinculación obligatoria.</p>
+                    </div>
                 </article>
-                <article class="article-card">
-                    <span class="kicker">Ayudas Públicas</span>
-                    <h3><a href="noticia-hub-hipotecas.html">Ampliados los fondos para el Bono Alquiler Joven</a></h3>
-                    <p>Las comunidades autónomas recibirán 200 millones extra. <a href="noticia-hub-hipotecas.html">→ Consulta los requisitos para pedirlo</a></p>
+                <article class="article-card" style="display: flex; gap: 20px; padding: 20px 0;">
+                    <img src="https://loremflickr.com/200/120/tax" style="width:150px; height:100px; object-fit:cover;" alt="Impuestos">
+                    <div>
+                        <span class="kicker">Renta 2024</span>
+                        <h3><a href="noticia-hub-hipotecas.html">Deducción por alquiler: los errores más comunes que te quitan dinero</a></h3>
+                        <p style="font-size: 0.9rem;">Cómo revisar tu borrador para no perder las ayudas autonómicas por vivienda.</p>
+                    </div>
                 </article>
-                <article class="article-card">
-                    <span class="kicker">Tipos de Interés</span>
-                    <h3><a href="noticia-hub-hipotecas.html">El euríbor baja en junio y abarata las cuotas anuales</a></h3>
-                    <p>Primer respiro significativo en dos años para los hipotecados a tipo variable. <a href="hub-hipotecas.html">→ Usa nuestra calculadora para ver cuánto te ahorras</a></p>
+                <article class="article-card" style="display: flex; gap: 20px; padding: 20px 0;">
+                    <img src="https://loremflickr.com/200/120/electricity" style="width:150px; height:100px; object-fit:cover;" alt="Luz">
+                    <div>
+                        <span class="kicker">Consumo</span>
+                        <h3><a href="noticia-hub-hipotecas.html">Cómo reducir la factura de la luz con el nuevo sistema de tramos</a></h3>
+                        <p style="font-size: 0.9rem;">Guía para programar tus electrodomésticos y ahorrar hasta 150 euros al año.</p>
+                    </div>
                 </article>
-                <article class="article-card">
-                    <span class="kicker">Impuestos</span>
-                    <h3><a href="noticia-hub-hipotecas.html">Deducción por alquiler en la Renta: qué comunidades permiten desgravar</a></h3>
-                    <p>Guía completa por regiones para no perder ni un euro en tu declaración de este año. <a href="noticia-hub-hipotecas.html">→ Consulta tu comunidad aquí</a></p>
+                <article class="article-card" style="display: flex; gap: 20px; padding: 20px 0;">
+                    <img src="https://loremflickr.com/200/120/investment" style="width:150px; height:100px; object-fit:cover;" alt="Inversion">
+                    <div>
+                        <span class="kicker">Inversión</span>
+                        <h3><a href="noticia-hub-hipotecas.html">¿Sigue siendo rentable el plan de pensiones? Alternativas para 2024</a></h3>
+                        <p style="font-size: 0.9rem;">Comparamos los planes tradicionales con los nuevos PIAS y fondos indexados.</p>
+                    </div>
                 </article>
-                <article class="article-card">
-                    <span class="kicker">Ahorro</span>
-                    <h3><a href="noticia-hub-hipotecas.html">¿Merece la pena instalar placas solares en un piso?</a></h3>
-                    <p>Analizamos el coste, las subvenciones disponibles y el tiempo de amortización real. <a href="noticia-hub-hipotecas.html">→ Leer análisis</a></p>
-                </article>
-                <article class="article-card">
-                    <span class="kicker">Consumo</span>
-                    <h3><a href="noticia-hub-hipotecas.html">Cómo reclamar si te cobran de más en la factura del gas</a></h3>
-                    <p>Pasos a seguir y modelos de reclamación ante las comercializadoras de último recurso. <a href="noticia-hub-hipotecas.html">→ Ver guía de reclamación</a></p>
-                </article>
-
-                <div class="module-header" style="margin-top: 50px;">
-                    <h2>Lo más leído en Economía Personal</h2>
-                </div>
-                <div class="most-read-list">
-                    <ol style="padding-left: 20px; font-family: var(--font-sans);">
-                        <li style="margin-bottom: 15px; font-weight: 700;"><a href="noticia-hub-hipotecas.html">Cómo pedir el cheque de 200 euros para familias vulnerables</a></li>
-                        <li style="margin-bottom: 15px; font-weight: 700;"><a href="noticia-hub-hipotecas.html">Calendario de la Renta 2024: fechas clave que no debes olvidar</a></li>
-                        <li style="margin-bottom: 15px; font-weight: 700;"><a href="noticia-hub-hipotecas.html">Las mejores cuentas remuneradas para ahorrar sin riesgo</a></li>
-                    </ol>
-                </div>
             </section>
 
-            <!-- Bloque 5. Recursos útiles / Bloque 6. Newsletter -->
+            <!-- Bloque Sidebar: Herramientas y Boletín (Mantenidos) -->
             <aside class="sidebar">
                 <section class="module" style="background-color: #fff; border: 1px solid #eee; border-top: 3px solid var(--accent-color); padding: 20px;">
                     <div class="module-header" style="margin-bottom: 20px;">
                         <h2 style="font-size: 1.1rem; text-transform: uppercase;">Herramientas Útiles</h2>
                     </div>
                     <div class="tools-grid" style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="noticia-hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px; transition: background 0.2s;">
+                        <a href="noticia-hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px;">
                             <span style="font-size: 1.5rem;">📊</span>
                             <div>
                                 <div style="font-weight: bold; color: var(--primary-color); font-size: 0.95rem;">Calculadora de IRPF</div>
-                                <div style="font-size: 0.75rem; color: #666;">Calcula tu sueldo neto para 2024</div>
+                                <div style="font-size: 0.75rem; color: #666;">Sueldo neto 2024</div>
                             </div>
                         </a>
-                        <a href="hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px; transition: background 0.2s;">
+                        <a href="hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px;">
                             <span style="font-size: 1.5rem;">🏠</span>
                             <div>
-                                <div style="font-weight: bold; color: var(--primary-color); font-size: 0.95rem;">Simulador de Hipoteca</div>
-                                <div style="font-size: 0.75rem; color: #666;">Cuota mensual y gastos de escritura</div>
-                            </div>
-                        </a>
-                        <a href="noticia-hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px; transition: background 0.2s;">
-                            <span style="font-size: 1.5rem;">📖</span>
-                            <div>
-                                <div style="font-weight: bold; color: var(--primary-color); font-size: 0.95rem;">Glosario Financiero</div>
-                                <div style="font-size: 0.75rem; color: #666;">Entiende la letra pequeña de tu banco</div>
-                            </div>
-                        </a>
-                        <a href="noticia-hub-hipotecas.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none; padding: 12px; background: #fafafa; border-radius: 4px; transition: background 0.2s;">
-                            <span style="font-size: 1.5rem;">📝</span>
-                            <div>
-                                <div style="font-weight: bold; color: var(--primary-color); font-size: 0.95rem;">Guía del Alquiler</div>
-                                <div style="font-size: 0.75rem; color: #666;">Checklist de documentos necesarios</div>
+                                <div style="font-weight: bold; color: var(--primary-color); font-size: 0.95rem;">Simulador Hipoteca</div>
+                                <div style="font-size: 0.75rem; color: #666;">Cuota y gastos</div>
                             </div>
                         </a>
                     </div>
                 </section>
 
-                <section class="newsletter-module">
-                    <h2>Boletín 'Tu Dinero'</h2>
-                    <p>Recibe cada semana consejos prácticos y guías para manejar tus finanzas sin esfuerzo.</p>
-                    <form onsubmit="return false;">
-                        <input type="email" placeholder="Tu correo electrónico" required>
-                        <button type="submit" class="btn-submit">Suscribirme</button>
-                    </form>
+                <section class="newsletter-module" style="margin-top: 30px; background: #f4f7f9; padding: 20px; border-top: 4px solid var(--brand-blue);">
+                    <h2 style="font-size: 1.2rem;">Boletín 'Tu Dinero'</h2>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Recibe cada semana los mejores consejos de ahorro de nuestros expertos.</p>
+                    <input type="email" placeholder="Tu correo" style="width:100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;">
+                    <button class="btn" style="width:100%;">Suscribirme</button>
                 </section>
-
-                <!-- Publicidad Sidebar -->
-                <div class="ad-slot ad-half-page">
-                    <span class="ad-label">Publicidad</span>
-                    <div class="ad-placeholder">300 x 600</div>
-                </div>
-
             </aside>
         </div>
-
-        <!-- Publicidad Cierre -->
-        <div class="ad-slot ad-megabanner">
-            <span class="ad-label">Publicidad</span>
-            <div class="ad-placeholder">970 x 90</div>
-        </div>
-
     </main>
 
-    <footer>
-        <p>elDiario.es - Mockup TFM Arquitectura SEO</p>
+    <footer class="main-footer" style="margin-top: 60px; border-top: 1px solid #ddd; padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <p>elDiario.es - Mockup TFM Arquitectura SEO</p>
+        </div>
     </footer>
 </body>
 </html>
