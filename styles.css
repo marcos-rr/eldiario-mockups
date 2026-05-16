@@ -122,25 +122,27 @@ a:hover {
   top: 100%;
   left: 0;
   background: white;
-  border: 1px solid var(--border-color);
-  border-top: none;
-  min-width: 220px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  min-width: 240px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 10px 0;
+  z-index: 1000;
 }
 .has-dropdown:hover .dropdown {
   display: block;
 }
 .dropdown a {
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--border-color);
-  text-transform: none;
+  display: block;
+  padding: 10px 20px !important;
+  color: #333 !important; /* Forzar texto oscuro */
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  text-transform: none;
+  border: none !important;
 }
 .dropdown a:hover {
-  background-color: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
-  color: var(--brand-blue);
+  background-color: #f8f8f8;
+  color: var(--brand-blue) !important;
 }
 
 /* Hot links */
