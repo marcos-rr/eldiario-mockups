@@ -283,24 +283,37 @@
                     </article>
                 </section>
                 
-                <!-- 6. Casos reales / 10. Integración audiovisual -->
-                <section class="module" style="background-color: #fafafa;">
+                <!-- 6. Casos reales -->
+                <section class="module" style="background-color: #fafafa; padding: 20px;">
                     <div class="module-header">
                         <h2>Experiencias y Casos Reales</h2>
                     </div>
-                    <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
-                        <article class="article-card">
-                            <div class="placeholder-img" style="height: 150px; background-image: url('https://loremflickr.com/400/200/couple,bank'); background-size: cover; position:relative;">
-                                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:white; font-size:2rem;">▶</div>
+                    <div class="grid-layout" style="grid-template-columns: 1fr; gap: 20px;">
+                        <article class="article-card" style="display: flex; gap: 20px; align-items: center;">
+                            <div class="placeholder-img"
+                                style="width: 250px; height: 140px; background-image: url('https://loremflickr.com/400/200/couple,bank'); background-size: cover; position:relative; flex-shrink:0;">
+                                <div
+                                    style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:white; font-size:2rem;">
+                                    ▶</div>
                             </div>
-                            <h3><a href="noticia-hub-hipotecas.html">"El banco me obligaba a contratar un seguro de vida que encarecía mi cuota 50€ al mes"</a></h3>
-                            <p style="font-size: 0.85rem;">Testimonio: Cómo negociar las bonificaciones.</p>
+                            <div>
+                                <h3><a href="noticia-hub-hipotecas.html">"El banco me obligaba a contratar un seguro de vida que encarecía mi cuota 50€ al mes"</a></h3>
+                                <p style="font-size: 0.9rem;">Testimonio: Cómo negociar las bonificaciones y evitar productos vinculados innecesarios.</p>
+                            </div>
                         </article>
-                        <article class="article-card">
-                            <span class="kicker">Podcast</span>
-                            <h3><a href="noticia-hub-hipotecas.html">Episodio 12: Hipotecas para jóvenes sin ahorros</a></h3>
-                            <p style="font-size: 0.85rem;">Hablamos de avales ICO y ayudas autonómicas.</p>
-                        </article>
+                    </div>
+                </section>
+
+                <!-- 10. Integración audiovisual: Podcast -->
+                <section class="podcast-module">
+                    <div class="podcast-cover">
+                        <img src="https://loremflickr.com/200/200/podcast,microphone" alt="Podcast Hipotecas">
+                        <div class="podcast-play-btn">▶</div>
+                    </div>
+                    <div class="podcast-info">
+                        <span class="kicker">Podcast: Al Día</span>
+                        <h2><a href="noticia-hub-hipotecas.html">Hipotecas para jóvenes: ¿Es el momento de comprar o esperar?</a></h2>
+                        <p>Analizamos con expertos el impacto de los avales ICO y las nuevas ayudas autonómicas para el acceso a la primera vivienda.</p>
                     </div>
                 </section>
 
