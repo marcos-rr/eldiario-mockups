@@ -300,6 +300,46 @@ h3 { font-size: 1.5rem; }
   padding: 30px;
 }
 
+/* SEO Highlight Module - Protruding from container */
+.module-seo-highlight {
+    background-color: #f0f7ff;
+    border: 1px solid #d0e1f9;
+    padding: 40px;
+    margin: 60px -40px; /* Salir del contenedor */
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,74,127,0.08);
+    position: relative;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.module-seo-highlight:hover {
+    transform: translateY(-5px);
+}
+
+.module-seo-highlight::after {
+    content: "ESTRATEGIA SEO: Módulo de Captación";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 4px 12px;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+@media (max-width: 1240px) {
+    .module-seo-highlight {
+        margin: 40px 0;
+        padding: 25px;
+    }
+}
+
 /* Local Menu */
 .local-menu {
   background-color: var(--bg-white);
