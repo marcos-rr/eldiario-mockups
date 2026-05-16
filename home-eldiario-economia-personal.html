@@ -10,7 +10,7 @@
     <!-- A. Cabecera global del medio -->
     <div class="top-bar">
         <div class="container">
-            <div><strong>Hoy hablamos de...</strong> <a href="#">Amnistía</a> <a href="#">Gaza</a> <a href="#">Elecciones</a></div>
+            <div><strong>Hoy hablamos de...</strong> <a href="#">Amnistía</a> <a href="#">Gaza</a> <a href="#">Elecciones</a> <a href="hub-hipotecas.html">Hipotecas</a></div>
             <div>
                 <a href="#">Redes</a>
                 <a href="#">Boletines</a>
@@ -32,43 +32,130 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <!-- Menú principal inspirado en la home real -->
                 <li><a href="#">Política</a></li>
                 <li><a href="#">Internacional</a></li>
                 <li class="has-dropdown">
-                    <a href="#" class="active">Economía ▾</a>
-                    <!-- Visibilidad de Economía Personal como subacceso -->
+                    <a href="#">Economía ▾</a>
                     <div class="dropdown">
-                        <a href="#">Macroeconomía</a>
-                        <a href="#">Trabajo</a>
                         <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
+                        <a href="hub-hipotecas.html" style="padding-left: 30px;">- Hipotecas</a>
                     </div>
                 </li>
-                <li><a href="#">Opinión</a></li>
+                <li><a href="#">Sociedad</a></li>
                 <li><a href="#">Cultura</a></li>
-                <li><a href="#">Clima</a></li>
-                <li><a href="#">Desalambre</a></li>
-                <li><a href="#">Igualdad</a></li>
-                <li><a href="#">Vertele</a></li>
-                <li><a href="#">Juegos</a></li>
-                <li><a href="#">≡ Más secciones</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="landing-videos.html">Vídeos</a></li>
+                <li><a href="javascript:void(0)" id="menu-trigger">≡ Secciones</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- E. Hot links / accesos rápidos contextuales -->
-    <div class="hot-links">
-        <div class="container">
-            <span>En Portada:</span>
-            <a href="#" class="hot">Euríbor</a>
-            <a href="hub-hipotecas.html">Hipotecas</a>
-            <a href="#">Ayudas vivienda</a>
-            <a href="#">Tipos de interés</a>
-            <a href="#">BCE</a>
+    <!-- Menú Hamburguesa Overlay -->
+    <div id="hamburger-menu" class="menu-overlay">
+        <div class="menu-content">
+            <span class="close-menu" id="close-menu">&times;</span>
+            <div class="cmp-main-menu-tablet">
+                <!-- Secciones -->
+                <div>
+                    <span class="title-option">Secciones</span>
+                    <ul>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Sociedad</a></li>
+                        <li>
+                            <a href="#">Economía</a>
+                            <ul>
+                                <li>
+                                    <a href="vertical-economia-personal.html" style="font-weight:bold; color:var(--accent-color);">Economía Personal</a>
+                                    <ul>
+                                        <li><a href="hub-hipotecas.html">Hipotecas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Internacional - The Guardian</a></li>
+                        <li>
+                            <a href="#">Cultura</a>
+                            <ul>
+                                <li><a href="#">Librotea</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tecnología</a></li>
+                        <li><a href="#">Desalambre</a></li>
+                        <li><a href="#">El rincón de pensar</a></li>
+                        <li><a href="#">Consumo Claro</a></li>
+                        <li>
+                            <a href="#">Vertele</a>
+                            <ul>
+                                <li><a href="#">Programación TV</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Ediciones Locales -->
+                <div>
+                    <span class="title-option">Ediciones locales</span>
+                    <ul>
+                        <li><a href="#">Andalucía</a></li>
+                        <li><a href="#">Aragón</a></li>
+                        <li><a href="#">Asturias</a></li>
+                        <li><a href="#">Canarias</a></li>
+                        <li><a href="#">Catalunya</a></li>
+                        <li><a href="#">Madrid</a></li>
+                        <li><a href="#">Comunitat Valenciana</a></li>
+                        <li><a href="#">Galicia</a></li>
+                    </ul>
+                </div>
+                <!-- Opinión y Podcasts -->
+                <div>
+                    <span class="title-option">Opinión y blogs</span>
+                    <ul>
+                        <li><a href="#">Zona Crítica</a></li>
+                        <li><a href="#">Ignacio Escolar</a></li>
+                        <li><a href="#">Al día</a></li>
+                        <li><a href="#">Micromachismos</a></li>
+                    </ul>
+                    <br>
+                    <span class="title-option">Podcasts</span>
+                    <ul>
+                        <li><a href="#">Un tema Al día</a></li>
+                        <li><a href="#">Carne Cruda</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- G. Publicidad Megabanner Superior -->
+    <script>
+        // Script para el menú hamburguesa
+        document.addEventListener('DOMContentLoaded', () => {
+            const trigger = document.getElementById('menu-trigger');
+            const menu = document.getElementById('hamburger-menu');
+            const close = document.getElementById('close-menu');
+
+            if (trigger && menu && close) {
+                trigger.addEventListener('click', () => {
+                    menu.style.display = 'block';
+                    document.body.classList.add('menu-open');
+                });
+
+                close.addEventListener('click', () => {
+                    menu.style.display = 'none';
+                    document.body.classList.remove('menu-open');
+                });
+
+                // Cerrar al hacer clic fuera del contenido
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        menu.style.display = 'none';
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+            }
+        });
+    </script>
+
+
+    <!-- Publicidad Megabanner Superior -->
     <div class="container" style="text-align: center;">
         <div class="ad-slot ad-megabanner">
             <span class="ad-label">Publicidad</span>
@@ -77,125 +164,259 @@
     </div>
 
     <main class="container">
-        <!-- C. Bloque de apertura editorial antes del módulo de Economía Personal -->
+        
+        <!-- Bloque 1: Política y Nacional -->
         <div class="grid-layout">
             <div class="main-content">
                 <article class="article-card main-story">
-                    <img src="https://loremflickr.com/800/450/politics,congress" class="placeholder-img" alt="Política">
-                    <span class="kicker">Política</span>
-                    <h1>Acuerdo inminente para la renovación del Consejo General del Poder Judicial</h1>
-                    <p class="entradilla">Los partidos cierran los últimos flecos tras meses de negociaciones bloqueadas. Se espera un anuncio conjunto esta tarde.</p>
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/800/450/politics,madrid" class="placeholder-img" alt="Política">
+                        <span class="kicker">Política</span>
+                        <h1>El Gobierno y la oposición cierran el acuerdo para renovar el Poder Judicial</h1>
+                        <p class="entradilla">Tras cinco años de bloqueo, ambas formaciones pactan una lista de juristas de prestigio para desbloquear el órgano de gobierno de los jueces.</p>
+                    </a>
                 </article>
                 <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
                     <article class="article-card">
-                        <img src="https://loremflickr.com/400/200/news,debate" class="placeholder-img" style="height: 120px;" alt="Congreso">
-                        <h2>La oposición pide explicaciones urgentes en el Congreso</h2>
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/400/200/news,tribunal" class="placeholder-img" style="height: 120px;" alt="Justicia">
+                            <span class="kicker">Nacional</span>
+                            <h2>Los nombres clave del nuevo Consejo General del Poder Judicial</h2>
+                        </a>
                     </article>
                     <article class="article-card">
-                        <img src="https://loremflickr.com/400/200/spain,news" class="placeholder-img" style="height: 120px;" alt="Análisis">
-                        <h2>Análisis: Los ganadores y perdedores del pacto</h2>
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/400/200/debate,politics" class="placeholder-img" style="height: 120px;" alt="Análisis">
+                            <span class="kicker">Análisis</span>
+                            <h2>¿Quién gana tras el acuerdo más esperado de la legislatura?</h2>
+                        </a>
                     </article>
                 </div>
             </div>
             <aside class="sidebar">
-                <article class="article-card">
-                    <span class="kicker">Opinión</span>
-                    <h2>El fin del bloqueo</h2>
-                    <p>Por Ignacio Escolar</p>
+                <div style="border-bottom: 2px solid var(--primary-color); margin-bottom: 20px;">
+                    <h3 style="font-family: var(--font-sans); text-transform: uppercase; font-size: 1rem;">Opinión</h3>
+                </div>
+                <article class="article-card" style="border:none; padding-bottom:15px; margin-bottom:15px;">
+                    <h2 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">El fin de una anomalía democrática</a></h2>
+                    <p style="font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700;">Por Ignacio Escolar</p>
                 </article>
-                <article class="article-card">
-                    <img src="https://loremflickr.com/400/200/europe,protest" class="placeholder-img" style="height: 100px;" alt="Protestas">
-                    <span class="kicker">Internacional</span>
-                    <h2>Nuevas protestas en las capitales europeas</h2>
+                <article class="article-card" style="border:none; padding-bottom:15px; margin-bottom:15px;">
+                    <h2 style="font-size: 1.2rem;"><a href="noticia-hub-hipotecas.html">La justicia que viene tras el pacto</a></h2>
+                    <p style="font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700;">Por Neus Tomàs</p>
                 </article>
+                
+                <div class="ad-slot ad-sidebar-box">
+                    <span class="ad-label">Publicidad</span>
+                    <div class="ad-placeholder">300 x 250</div>
+                </div>
+            </aside>
+        </div>
 
-                <!-- H. Publicidad Sidebar -->
-                <div class="ad-slot ad-half-page">
+        <!-- MÓDULO DESTACADO SEO: ECONOMÍA PERSONAL (SUBIDO ANTES DE INTERNACIONAL) -->
+        <section class="module-seo-highlight">
+            <div class="module-header">
+                <h2 style="color: var(--brand-blue);">Economía Personal</h2>
+                <a href="vertical-economia-personal.html">Ir al vertical completo →</a>
+            </div>
+            
+            <div class="local-menu" style="background:transparent; border-top:none; margin-bottom: 20px; padding-top:0;">
+                <ul>
+                    <li><a href="hub-hipotecas.html" class="active">Hipotecas</a></li>
+                    <li><a href="noticia-hub-hipotecas.html">Renta 2024</a></li>
+                    <li><a href="noticia-hub-hipotecas.html">Pensiones</a></li>
+                    <li><a href="noticia-hub-hipotecas.html">Ahorro Luz</a></li>
+                    <li><a href="noticia-hub-hipotecas.html">Ayudas Alquiler</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-3">
+                <article class="article-card" style="border:none; margin-bottom:0; background: white; padding: 15px; border-radius: 4px;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/600/300/house,family" class="placeholder-img" style="height: 150px;" alt="Hipoteca">
+                        <span class="kicker">Guía Especial</span>
+                        <h3 style="font-size: 1.2rem;">¿Qué hipoteca puedes permitirte con tu salario?</h3>
+                    </a>
+                </article>
+                <article class="article-card" style="border:none; margin-bottom:0; background: white; padding: 15px; border-radius: 4px;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/600/300/documents,money" class="placeholder-img" style="height: 150px;" alt="Bono Alquiler">
+                        <span class="kicker">Ayudas</span>
+                        <h3 style="font-size: 1.2rem;">Bono Alquiler Joven: requisitos y cómo solicitarlo</h3>
+                    </a>
+                </article>
+                <article class="article-card" style="border:none; margin-bottom:0; background: white; padding: 15px; border-radius: 4px;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/600/300/piggybank,savings" class="placeholder-img" style="height: 150px;" alt="Ahorro">
+                        <span class="kicker">Ahorro</span>
+                        <h3 style="font-size: 1.2rem;">5 trucos para reducir tu factura de la luz este verano</h3>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bloque 2: Sociedad e Internacional -->
+        <div class="grid-layout" style="margin-top: 40px;">
+            <div class="main-content">
+                <div class="module-header">
+                    <h2>Sociedad</h2>
+                </div>
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/500/300/health,doctor" class="placeholder-img" style="height: 200px;" alt="Sanidad">
+                            <span class="kicker">Salud Pública</span>
+                            <h2>La lista de espera en la sanidad pública alcanza su máximo histórico</h2>
+                        </a>
+                    </article>
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/500/300/education,school" class="placeholder-img" style="height: 200px;" alt="Educación">
+                            <span class="kicker">Educación</span>
+                            <h2>Los retos del nuevo curso: más becas y menos ratio de alumnos</h2>
+                        </a>
+                    </article>
+                </div>
+                <div class="module-header" style="margin-top: 40px;">
+                    <h2>Internacional</h2>
+                </div>
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/500/300/war,gaza" class="placeholder-img" style="height: 200px;" alt="Gaza">
+                            <span class="kicker">Oriente Próximo</span>
+                            <h2>La ofensiva en Gaza continúa pese a la presión internacional</h2>
+                        </a>
+                    </article>
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/500/300/europe,brussels" class="placeholder-img" style="height: 200px;" alt="Europa">
+                            <span class="kicker">Unión Europea</span>
+                            <h2>Europa debate nuevas sanciones económicas contra Rusia</h2>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="ad-slot ad-half-page" style="margin-top: 40px;">
                     <span class="ad-label">Publicidad</span>
                     <div class="ad-placeholder">300 x 600</div>
                 </div>
             </aside>
         </div>
 
-        <!-- D. Módulo fijo en la home para empujar el vertical -->
-        <!-- Inserción estratégica del módulo fijo de Economía Personal en la mitad superior -->
-        <section class="module highlight">
-            <div class="module-header">
-                <h2>Economía Personal</h2>
-                <a href="vertical-economia-personal.html">Ir al vertical completo →</a>
-            </div>
-            
-            <div class="local-menu" style="background:transparent; border-top:none; margin-bottom: 15px; padding-top:0;">
-                <ul>
-                    <li><a href="hub-hipotecas.html" class="active">Hipotecas</a></li>
-                    <li><a href="#">Declaración de la Renta</a></li>
-                    <li><a href="#">Pensiones</a></li>
-                    <li><a href="#">Ayudas</a></li>
-                    <li><a href="#">Ahorro</a></li>
-                    <li><a href="#">Vivienda</a></li>
-                </ul>
-            </div>
-
-            <div class="grid-3">
-                <article class="article-card" style="border:none; margin-bottom:0;">
-                    <a href="noticia-hub-hipotecas.html">
-                        <img src="https://loremflickr.com/600/300/house,money" class="placeholder-img" style="height: 150px;" alt="Hipoteca">
-                        <span class="kicker">Guía de Hipotecas</span>
-                        <h3 style="font-size: 1.2rem;">Qué hipoteca te puedes permitir según tu sueldo actual</h3>
-                    </a>
-                </article>
-                <article class="article-card" style="border:none; margin-bottom:0;">
-                    <a href="noticia-hub-hipotecas.html">
-                        <img src="https://loremflickr.com/600/300/apartment,young" class="placeholder-img" style="height: 150px;" alt="Bono Alquiler">
-                        <span class="kicker">Ayudas</span>
-                        <h3 style="font-size: 1.2rem;">Calendario completo para solicitar el Bono Alquiler Joven</h3>
-                    </a>
-                </article>
-                <article class="article-card" style="border:none; margin-bottom:0;">
-                    <a href="noticia-hub-hipotecas.html">
-                        <img src="https://loremflickr.com/600/300/taxes,documents" class="placeholder-img" style="height: 150px;" alt="Renta">
-                        <span class="kicker">Renta</span>
-                        <h3 style="font-size: 1.2rem;">Las 5 deducciones autonómicas que sueles olvidar en el borrador</h3>
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <!-- F. Módulos relacionados de actualidad económica -->
-        <section class="module">
-            <div class="module-header">
-                <h2>Mercados y Consumo</h2>
-            </div>
-            <div class="grid-layout">
-                <div>
-                    <article class="article-card">
+        <!-- Bloque 3: Ciencia y Clima -->
+        <div class="grid-layout" style="margin-top: 40px;">
+            <div class="main-content">
+                <div class="module-header">
+                    <h2>Ciencia</h2>
+                </div>
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <article class="article-card" style="border:none;">
                         <a href="noticia-hub-hipotecas.html">
-                            <img src="https://loremflickr.com/800/500/bank,building" class="placeholder-img" style="height: 250px;" alt="BCE">
-                            <span class="kicker">Tipos de Interés</span>
-                            <h2>El BCE prepara otra bajada de tipos ante la debilidad económica</h2>
-                            <p class="entradilla">Lagarde avisa de que la inflación está controlada y abre la puerta a un alivio en las cuotas hipotecarias antes de fin de año.</p>
+                            <img src="https://loremflickr.com/400/250/space,galaxy" class="placeholder-img" style="height: 150px;" alt="Espacio">
+                            <h3 style="font-size: 1rem;">Nuevas imágenes del James Webb revelan el origen de una nebulosa</h3>
                         </a>
-                        <!-- Enlaces secundarios hacia el clúster -->
-                        <div style="margin-top: 10px; font-size: 0.9rem;">
-                            <strong>Contexto:</strong> 
-                            <a href="hub-hipotecas.html" style="margin-right: 10px;">→ Ver guía sobre hipoteca variable</a>
-                            <a href="hub-hipotecas.html">→ Cómo calcular tu nueva cuota</a>
-                        </div>
                     </article>
-                </div>
-                <div>
-                    <article class="article-card">
-                        <h3><a href="noticia-hub-hipotecas.html">El euríbor cierra el mes a la baja y da un respiro a los hipotecados</a></h3>
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/400/250/lab,science" class="placeholder-img" style="height: 150px;" alt="Medicina">
+                            <h3 style="font-size: 1rem;">Un avance genético abre la puerta a nuevas terapias contra el cáncer</h3>
+                        </a>
                     </article>
-                    <article class="article-card">
-                        <h3><a href="noticia-hub-hipotecas.html">El precio de la vivienda de segunda mano sube un 5% en las grandes ciudades</a></h3>
-                        <a href="hub-hipotecas.html" style="font-size: 0.85rem;">→ Gastos ocultos al comprar casa</a>
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/400/250/robot,tech" class="placeholder-img" style="height: 150px;" alt="IA">
+                            <h3 style="font-size: 1rem;">¿Puede la IA predecir desastres naturales con mayor precisión?</h3>
+                        </a>
                     </article>
                 </div>
             </div>
+            <aside class="sidebar">
+                <div class="module highlight" style="border-top-color: #00796B; background-color: #e0f2f1;">
+                    <span class="kicker" style="color: #00796B;">Crisis Climática</span>
+                    <h3><a href="noticia-hub-hipotecas.html">Los océanos registran temperaturas récord por décimo mes consecutivo</a></h3>
+                    <p style="font-size: 0.85rem; margin-top: 10px;">Los científicos advierten de consecuencias imprevisibles para la biodiversidad marina.</p>
+                </div>
+            </aside>
+        </div>
+
+
+        <!-- Bloque 4: Deportes y Corazón -->
+        <div class="grid-layout" style="margin-top: 40px;">
+            <div class="main-content">
+                <div class="module-header">
+                    <h2>Deportes</h2>
+                </div>
+                <div class="grid-3" style="grid-template-columns: 1.5fr 1fr; gap: 30px;">
+                    <article class="article-card" style="border:none;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <img src="https://loremflickr.com/600/350/football,stadium" class="placeholder-img" style="height: 250px;" alt="Fútbol">
+                            <span class="kicker">Eurocopa 2024</span>
+                            <h2 style="font-size: 1.5rem;">España se prepara para el debut con dudas en el once inicial</h2>
+                        </a>
+                    </article>
+                    <div>
+                        <article class="article-card" style="border:none; margin-bottom: 20px;">
+                            <a href="noticia-hub-hipotecas.html">
+                                <h3 style="font-size: 1.1rem;">Tenis: Alcaraz avanza con paso firme en Roland Garros</h3>
+                            </a>
+                        </article>
+                        <article class="article-card" style="border:none;">
+                            <a href="noticia-hub-hipotecas.html">
+                                <h3 style="font-size: 1.1rem;">Ciclismo: Un final de etapa épico en las montañas</h3>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="module" style="background-color: #fce4ec; border-top: 4px solid #d81b60; padding: 20px;">
+                    <h2 style="font-size: 1.2rem; color: #d81b60; margin-bottom: 15px;">Corazón</h2>
+                    <article class="article-card" style="border:none; margin:0;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <h3 style="font-size: 1rem;">La reaparición de los reyes en un acto sorpresa en Madrid</h3>
+                        </a>
+                    </article>
+                    <hr style="border:none; border-top: 1px solid #f8bbd0; margin: 10px 0;">
+                    <article class="article-card" style="border:none; margin:0;">
+                        <a href="noticia-hub-hipotecas.html">
+                            <h3 style="font-size: 1rem;">Famosos: Las vacaciones de lujo de las celebridades en Ibiza</h3>
+                        </a>
+                    </article>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Bloque 5: Cultura -->
+        <section class="module" style="background-color: #1a1a1a; color: white; padding: 40px; margin: 40px 0; border:none;">
+            <div class="module-header">
+                <h2 style="color: white;">Cultura</h2>
+                <a href="#" style="color: #aaa;">Más cultura →</a>
+            </div>
+            <div class="grid-3">
+                <article class="article-card" style="border:none; margin:0;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/400/250/cinema,movie" class="placeholder-img" style="height: 180px;" alt="Cine">
+                        <h3 style="color: white; font-size: 1.1rem;">Las 10 películas imprescindibles del festival de Cannes</h3>
+                    </a>
+                </article>
+                <article class="article-card" style="border:none; margin:0;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/400/250/book,library" class="placeholder-img" style="height: 180px;" alt="Libros">
+                        <h3 style="color: white; font-size: 1.1rem;">Entrevista con el último premio Pulitzer de ficción</h3>
+                    </a>
+                </article>
+                <article class="article-card" style="border:none; margin:0;">
+                    <a href="noticia-hub-hipotecas.html">
+                        <img src="https://loremflickr.com/400/250/concert,music" class="placeholder-img" style="height: 180px;" alt="Música">
+                        <h3 style="color: white; font-size: 1.1rem;">El regreso de las grandes giras de estadios este verano</h3>
+                    </a>
+                </article>
+            </div>
         </section>
 
-        <!-- I. Publicidad Intermedia / Cierre -->
+        <!-- Publicidad Final -->
         <div class="ad-slot ad-megabanner">
             <span class="ad-label">Publicidad</span>
             <div class="ad-placeholder">970 x 90</div>
