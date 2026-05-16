@@ -46,19 +46,19 @@ a:hover {
 
 /* Header & Navigation */
 .top-bar {
-  background-color: #000; /* Banda superior muy oscura */
-  color: #fff;
+  background-color: var(--bg-white);
+  color: #555;
   padding: 8px 0;
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
 }
 .top-bar .container {
   display: flex;
   justify-content: space-between;
 }
 .top-bar a {
-  color: #fff;
+  color: #555;
   margin-left: 15px;
   text-decoration: none;
 }
@@ -67,9 +67,8 @@ a:hover {
 }
 
 .main-header {
-  padding: 25px 0;
+  padding: 15px 0;
   background-color: var(--bg-white);
-  border-bottom: 1px solid var(--border-color);
 }
 .header-flex {
   display: flex;
@@ -88,7 +87,8 @@ a:hover {
 }
 
 .main-nav {
-  border-bottom: 2px solid var(--primary-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   background-color: var(--bg-white);
   position: sticky;
   top: 0;
@@ -113,8 +113,8 @@ a:hover {
 }
 .main-nav a.active, .main-nav a:hover {
   color: var(--brand-blue);
-  border-bottom: 4px solid var(--brand-blue);
-  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 11px;
   text-decoration: none;
 }
 .has-dropdown {
@@ -260,13 +260,12 @@ h3 { font-size: 1.5rem; }
 }
 .kicker {
   font-family: var(--font-sans);
-  color: var(--brand-blue);
+  color: #00a4e6; /* Azul claro estilo eldiario */
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
   display: block;
   margin-bottom: 8px;
-  letter-spacing: 0.5px;
 }
 
 /* Modules */
@@ -423,20 +422,19 @@ h3 { font-size: 1.5rem; }
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--brand-blue);
-  color: white;
+  background-color: var(--brand-yellow);
+  color: var(--primary-color);
   font-family: var(--font-sans);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
-  letter-spacing: 0.5px;
   border: none;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #003359;
+  background-color: #e6d315;
   text-decoration: none;
-  color: white;
+  color: var(--primary-color);
 }
 
 /* Article Body extra */
