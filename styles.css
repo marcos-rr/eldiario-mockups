@@ -181,12 +181,13 @@ a:hover {
 }
 .local-menu a {
   display: block;
-  padding: 10px 10px;
-  color: #444;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 6px 4px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
