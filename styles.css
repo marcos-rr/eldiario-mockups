@@ -159,6 +159,51 @@ a:hover {
   margin-right: 15px;
   color: #666;
 }
+
+/* Menú Local (Verticales / Hubs) */
+.local-menu {
+  background-color: #f0f4f8;
+  border-bottom: 1px solid #d0e1f9;
+  padding: 0;
+  font-family: var(--font-sans);
+  overflow: visible;
+}
+.local-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 5px;
+}
+.local-menu li {
+  position: relative;
+}
+.local-menu a {
+  display: block;
+  padding: 15px 12px;
+  color: #444;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.local-menu a:hover {
+  color: var(--accent-color);
+  background: rgba(255,255,255,0.5);
+}
+.local-menu .dropdown {
+  min-width: 200px;
+  border-top: 3px solid var(--accent-color);
+}
+.local-menu .dropdown a {
+  padding: 10px 20px;
+  text-transform: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 .hot-links a {
   color: var(--primary-color);
   margin-right: 20px;
